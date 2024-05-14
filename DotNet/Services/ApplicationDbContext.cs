@@ -24,5 +24,7 @@ namespace DotNet.Services
 
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
 
+        public DbSet<Item> Items { get; set; }
+
     }
 }
