@@ -8,9 +8,11 @@ using Microsoft.EntityFrameworkCore;
 using DotNet.Models;
 using DotNet.Services;
 using Microsoft.Data.SqlClient;
+using Microsoft.AspNetCore.Authorization;
 
 namespace DotNet.Controllers
 {
+    [Authorize(Roles ="Admin")]
     public class CategoriesController : Controller
     {
         private readonly ApplicationDbContext _context;

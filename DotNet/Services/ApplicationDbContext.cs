@@ -21,5 +21,8 @@ namespace DotNet.Services
                 .HasIndex(c => c.CategoryName)
                 .IsUnique();
         }
+
+        public DbSet<ApplicationUser> ApplicationUsers { get; set; }
+
     }
 }
