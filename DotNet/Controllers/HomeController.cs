@@ -1,6 +1,7 @@
 ﻿using DotNet.Models;
 using DotNet.Services;
 using ExcelDataReader;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
@@ -35,10 +36,13 @@ namespace DotNet.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
+        [Authorize(Roles = "Admin")]
         public IActionResult BulkCategory()
         {
             return View();
         }
+
+        [Authorize(Roles = "Admin")]
 
         [HttpPost]
 
@@ -123,12 +127,12 @@ namespace DotNet.Controllers
 
             return View();
         }
-
+        [Authorize(Roles = "Admin,General")]
         public IActionResult BulkItem()
         {
             return View();
         }
-
+        [Authorize(Roles = "Admin,General")]
         [HttpPost]
 
         public async Task<IActionResult> BulkItem(IFormFile file)

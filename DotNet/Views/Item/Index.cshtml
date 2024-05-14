@@ -2,15 +2,13 @@
 @{
 }
 
-<h2 class="text-center mb-5">List of Items</h2>
+<h1 class="text-center mb-5">List of Items</h1>
 
 <div class="row mb-5">
-    <div class="col">
-        <a class="btn btn-primary" asp-controller="Item" asp-action="Create">New Item</a>
+    <div class="col text-end">
+        <a class="btn btn-outline-secondary" asp-controller="Item" asp-action="Create">New Item</a>
     </div>
-    <div class="col">
-        <!-- You can add any additional controls here if needed -->
-    </div>
+    
 </div>
 
 <table class="table">
@@ -44,8 +42,8 @@
                 </td>
                 <td>@item.CreatedAt.ToString("dd/MM/yyyy")</td>
                 <td style="white-space:nowrap">
-                    <a class="btn btn-primary btn-sm" asp-controller="Item" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
-                    <a class="btn btn-danger btn-sm" asp-controller="Item" asp-action="Delete" asp-route-id="@item.Id" onclick="return confirm('Are you sure?')">Delete</a>
+                    <a class="btn btn-dark btn-sm" asp-controller="Item" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                    <a class="btn btn-warning btn-sm" asp-controller="Item" asp-action="Delete" asp-route-id="@item.Id" onclick="return confirm('Are you sure?')">Delete</a>
                 </td>
             </tr>
         }

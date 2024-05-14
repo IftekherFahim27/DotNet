@@ -1,9 +1,11 @@
 ﻿using DotNet.Models;
 using DotNet.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DotNet.Controllers
 {
+    [Authorize(Roles = "Admin,General")]
     public class ItemController : Controller
     {
         private readonly ApplicationDbContext context;
