@@ -1,0 +1,38 @@
+﻿@if (ViewBag.Message == "Success")
+{
+    <div class="alert alert-success text-center" role="alert">
+        Congrats !!! All record inserted Successfully into Item Table.
+    </div>
+}
+else if (ViewBag.Message == "Empty")
+{
+    <div class="alert alert-danger text-center" role="alert">
+        Opps !!! File is Empty !!! Records not inserted into Item Table !!! Select a File  
+    </div>
+}
+else if (ViewBag.Message == "Duplicate")
+{
+    <div class="alert alert-warning text-center" role="alert">
+        Caution !!! Duplicate Category Found !!!!Records not inserted into Item Table !!!!
+    </div>
+}
+
+<form method="post" enctype="multipart/form-data">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Select Excel File</label>
+                    <input type="file" name="file" class="form-control" />
+                </div>
+                <br />
+                <div class="form-group text-center">
+                    <input type="submit" asp-controller="Home" asp-action="BulkItem" class="btn btn-dark" value="Upload Excel File" />
+                    <a href="javascript:history.go(-1)" class="btn btn-secondary">Cancel</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+
