@@ -36,6 +36,8 @@ namespace DotNet.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
+        //For Bulk upload to Category Table
+
         [Authorize(Roles = "Admin")]
         public IActionResult BulkCategory()
         {
@@ -127,6 +129,9 @@ namespace DotNet.Controllers
 
             return View();
         }
+
+        //For Bulk upload to Item Table
+
         [Authorize(Roles = "Admin,General")]
         public IActionResult BulkItem()
         {

@@ -21,7 +21,7 @@ namespace DotNet.Controllers
             return View(roles);
         }
 
-
+        //Create new roles if necessary
         [HttpGet]
 
         public IActionResult Create()

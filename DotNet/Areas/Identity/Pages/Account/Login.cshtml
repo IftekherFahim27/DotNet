@@ -28,8 +28,9 @@
                         @Html.DisplayNameFor(m => m.Input.RememberMe)
                     </label>
                 </div>
-                <div>
-                    <button id="login-submit" type="submit" class="w-100 btn btn-lg btn-dark">Log in</button>
+                <div class="d-flex justify-content-between">
+                    <button id="login-submit" type="submit" class="w-100 btn btn-lg btn-dark flex-grow-1 me-2">Log in</button>
+                    <a href="javascript:history.back()" class="w-100 btn btn-lg btn-warning flex-grow-1 ms-2">Cancel</a>
                 </div>
 
             </form>

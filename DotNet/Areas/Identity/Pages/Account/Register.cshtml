@@ -44,7 +44,10 @@
                         </select>
                         <span asp-validation-for="Input.Role" class="text-danger"></span>
                     </div>
-                    <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-dark">Register</button>
+                    <div class="d-flex justify-content-between">
+                    <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-dark flex-grow-1 me-2">Register</button>
+                    <a href="javascript:history.back()" class="w-100 btn btn-lg btn-warning flex-grow-1 ms-2">Cancel</a>
+                    </div>
                 </form>
             </div>
             </<div>

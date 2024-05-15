@@ -18,8 +18,8 @@ namespace DotNet.Controllers
         }
         public IActionResult Index()
         {
-            //var items=context.Items.ToList();
-            var items = context.Items.OrderByDescending(i => i.Id).ToList();
+            var items=context.Items.ToList();
+            //var items = context.Items.OrderByDescending(i => i.Id).ToList();
             return View(items);
         }
 

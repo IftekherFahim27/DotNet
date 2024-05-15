@@ -11,8 +11,10 @@ namespace DotNet.Services
             
         }
 
+        //Creating Category Table
         public DbSet<Category> Categories { get; set; }
 
+        // For Checking Unique Category Name
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -24,6 +26,7 @@ namespace DotNet.Services
 
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
 
+        //Creating Category Table
         public DbSet<Item> Items { get; set; }
 
     }
