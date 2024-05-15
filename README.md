@@ -60,7 +60,7 @@ DotNet is a web-based application developed using ASP.NET Core. This project aim
 - **Microsoft.EntityFrameworkCore.Sqlite Version="7.0.18"**
 - **Microsoft.EntityFrameworkCore.SqlServer Version="7.0.18"**
 - **Microsoft.EntityFrameworkCore.Tools Version="7.0.18"**
-- **ExcelDataReader Version="3.6.0" **
+- **ExcelDataReader Version="3.6.0"**
 ## Usage
 
 ### Roles and Access
